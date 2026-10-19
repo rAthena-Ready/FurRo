@@ -2,6 +2,8 @@
 
 โปรเจกต์เซิร์ฟเวอร์ Ragnarok Online **FurRo** (Renewal Mode รองรับ Class 4 & Doram) โครงสร้างแบบ **Portable Zero-Setup** ขนาดรวมทั้งโฟลเดอร์เพียง **~520 MB** (บีบอัด Zip เหลือเพียง ~150 MB)
 
+🔗 **GitHub Repository:** [https://github.com/rAthena-Ready/FurRo](https://github.com/rAthena-Ready/FurRo)
+
 > ⚡ **เปิดด่วนใน 1 นาที (ไม่ชอบอ่านยาว):** ดูได้ที่ [QUICK_START.md](file:///c:/Users/Zethen/Downloads/FurRo/QUICK_START.md)  
 > 📘 **คู่มือเรียนรู้ฉบับละเอียด (มีคำอธิบาย):** ดูได้ที่ [TUTORIAL.md](file:///c:/Users/Zethen/Downloads/FurRo/TUTORIAL.md)
 
