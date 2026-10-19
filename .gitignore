@@ -32,7 +32,11 @@ Database/*.zip
 Database/HeidiSQL*/
 Database/mariadb-*/
 
-# Client big data files
+# Client big data files & Warpgate
+Client/FurRO/
+Client/WARP/
+Client/Warpgate.exe
+Client/warpgate.log
 Client/*.grf
 Client/data.grf
 Client/BGM/

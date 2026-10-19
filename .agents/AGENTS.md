@@ -4,12 +4,12 @@
 - **Project Name:** FurRo (Ragnarok Online Private Server)
 - **Server Core:** rAthena (Latest Renewal Mode)
 - **Target Mode:** **Renewal** (Class 3 & Class 4, Doram summoners, modern formulas)
-- **Packet Version (PACKETVER):** `20211103` (Configured in `Server/src/config/packets.hpp`)
+- **Packet Version (PACKETVER):** `20250716` (Configured in `Server/src/custom/defines_pre.hpp` and `packets.hpp`)
 - **Total Project Size:** ~520 MB (Portable Zero-Setup, compresses to ~150 MB ZIP)
 - **Directory Layout:**
   - `Server/`: Cloned rAthena repository (~116 MB via shallow clone `--depth 1`). Includes `build_server.bat`, `start_server.bat`, `stop_server.bat`.
   - `Database/`: Portable MariaDB 10.11 (~388 MB). Dynamic paths (100% path-independent). Includes `start_db.bat`, `stop_db.bat`, and pre-imported `ragnarok` database.
-  - `Client/`: Reserved for Lite RO Client 2021-11-03 (~1.5–2.5 GB), `data.grf`, and patched executable.
+  - `Client/`: Full Client 2025-07-16 (WARPGATE / WARP0716, `data.grf`, and patched executable).
   - `install_build_tools.bat`: Automatic installer for C++ CLI Build Tools.
   - `.agents/`: AI agent rules, guidelines, and context.
 

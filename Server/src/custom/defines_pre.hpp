@@ -10,5 +10,8 @@
  **/
 
 
+#ifndef PACKETVER
+	#define PACKETVER 20250716
+#endif
 
 #endif /* CONFIG_CUSTOM_DEFINES_PRE_HPP */
