@@ -1,0 +1,37 @@
+# Windows & OS
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Visual Studio & Compilers
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+vs_BuildTools.exe
+
+# Binary executables and build output
+*.exe
+*.pdb
+*.ilk
+Server/login-server.exe
+Server/char-server.exe
+Server/map-server.exe
+Server/web-server.exe
+Server/binaries/
+binaries/
+Server/obj/
+Server/bin/
+
+# MariaDB Portable engine & database files (>100MB violates GitHub policy)
+Database/mariadb/
+Database/data/
+Database/*.zip
+
+# Client big data files
+Client/*.grf
+Client/data.grf
+Client/BGM/
+Client/System/

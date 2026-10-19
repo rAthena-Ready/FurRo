@@ -1,0 +1,41 @@
+name: Build & Release Renewal Binaries (x64)
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+      - main
+    paths:
+      - 'Server/src/**'
+      - 'Server/3rdparty/**'
+
+jobs:
+  build:
+    name: Build rAthena Renewal Release x64
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v2
+
+      - name: Build rAthena Solution (Release x64)
+        run: |
+          msbuild Server\rAthena.sln -t:Build /p:Configuration=Release /p:Platform=x64
+
+      - name: Collect Compiled Binaries
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force -Path .\binaries
+          Get-ChildItem -Path Server -Filter "*.exe" | Copy-Item -Destination .\binaries\
+          Get-ChildItem -Path Server -Filter "*.dll" | Copy-Item -Destination .\binaries\
+
+      - name: Upload Binaries Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: rAthena-Renewal-Binaries-x64
+          path: .\binaries\
+          retention-days: 14
