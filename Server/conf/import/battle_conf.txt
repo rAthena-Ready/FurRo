@@ -1,1 +1,2 @@
 // Custom battle configurations
+feature.mesitemicon: off

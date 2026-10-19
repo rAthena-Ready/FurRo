@@ -11,6 +11,14 @@ if not exist "login-server.exe" (
     exit /b 1
 )
 
+:: Ensure import folders exist to prevent missing file warnings
+if not exist "%~dp0db\import\" (
+    xcopy /E /I /Q /Y "%~dp0db\import-tmpl" "%~dp0db\import" >nul 2>&1
+)
+if not exist "%~dp0conf\msg_conf\import\" (
+    xcopy /E /I /Q /Y "%~dp0conf\msg_conf\import-tmpl" "%~dp0conf\msg_conf\import" >nul 2>&1
+)
+
 :: Check if MariaDB is running
 "%~dp0..\Database\mariadb\bin\mysqladmin.exe" -h 127.0.0.1 -u root -proot ping >nul 2>&1
 if %ERRORLEVEL% NEQ 0 (

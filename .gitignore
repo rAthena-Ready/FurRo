@@ -29,6 +29,8 @@ Server/bin/
 Database/mariadb/
 Database/data/
 Database/*.zip
+Database/HeidiSQL*/
+Database/mariadb-*/
 
 # Client big data files
 Client/*.grf
