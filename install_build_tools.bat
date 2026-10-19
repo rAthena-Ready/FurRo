@@ -3,18 +3,18 @@ title Install Visual Studio Build Tools (C++ CLI Only)
 cd /d "%~dp0"
 
 echo ====================================================================
-echo  Installing Visual Studio Build Tools (C++ Compiler & MSBuild)
+echo  Installing Visual Studio Build Tools (C++ Compiler and MSBuild)
 echo  Workload: Desktop development with C++ (CLI only, No IDE)
 echo ====================================================================
 echo.
 
-if not exist "%~dp0vs_BuildTools.exe" (
-    echo [INFO] Downloading vs_BuildTools installer (~4 MB)...
-    curl.exe -L -o "%~dp0vs_BuildTools.exe" "https://aka.ms/vs/17/release/vs_BuildTools.exe"
-)
+if exist "%~dp0vs_BuildTools.exe" goto RUN_INSTALLER
+echo [INFO] Downloading vs_BuildTools installer...
+curl.exe -L -o "%~dp0vs_BuildTools.exe" "https://aka.ms/vs/17/release/vs_BuildTools.exe"
 
+:RUN_INSTALLER
 echo Starting Visual Studio Installer...
-echo (If Windows asks for Administrator permission, please click "Yes")
+echo Please click Yes if Windows asks for Administrator permission.
 echo.
 
 "%~dp0vs_BuildTools.exe" --passive --norestart --nocache --add Microsoft.VisualStudio.Workload.VCTools;includeRecommended
